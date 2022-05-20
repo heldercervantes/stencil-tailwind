@@ -1,0 +1,49 @@
+{
+  "name": "stw-boilerplate",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/stw-boilerplate/stw-boilerplate.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "stencil:dev": "npm-run-all --parallel tailwind:dev stencil:watch",
+    "stencil:watch": "stencil build --dev --watch --serve",
+    "stencil:build": "stencil build --docs",
+    "stencil:generate": "stencil generate",
+    "tailwind:dev": "npm-run-all --parallel \"tailwind:dev:* {@}\" --",
+    "tailwind:dev:build": "tailwindcss -i ./src/tailwind/input.scss -o ./build-tailwind/tailwind.css --watch",
+    "tailwind:dev:stencil": "tailwindcss -i ./src/tailwind/input.scss -o ./www/css/tailwind.css --watch"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "fullhuman/postcss-purgecss",
+    "@stencil/core": "^2.13.0",
+    "@stencil/sass": "^1.5.2",
+    "autoprefixer": "^10.4.7",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "stencil-tailwind-plugin": "^1.3.0",
+    "typescript": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.5",
+    "jest-cli": "^27.4.5",
+    "postcss-import": "^14.1.0",
+    "puppeteer": "^10.0.0",
+    "tailwindcss": "^3.0.24"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,30 @@
+{
+    "screens": {
+        "sm": "640px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px",
+        "2xl": "1536px"
+    },
+
+    "fontFamily": {
+        "primary": ["Arial"]
+    },
+
+    "colors": {
+        "primary": "#00F",
+        "secondary": "#F00",
+        "gray": {
+            "DEFAULT": "#666",
+            "light": "#999",
+            "lightest": "#ccc"
+        }
+    },
+
+    "container": {
+        "center": true,  
+        "screens": {
+          "sm": "1240px"
+        }
+    }
+}

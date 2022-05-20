@@ -1,0 +1,9 @@
+my-component {
+  display: block;
+
+  div {
+    font-family: theme('fontFamily.primary');
+    
+    @apply text-blue-600 p-10;
+  }
+}
